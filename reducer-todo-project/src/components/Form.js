@@ -5,8 +5,6 @@ const Form = (props) => {
         item: ''
     })
 
-    // Unsure if I'm going to pass down state as a prop or...
-    // * Removed as a prop for the time being *
     console.log('props in form: ', props)
 
     const handleChanges = e => {
