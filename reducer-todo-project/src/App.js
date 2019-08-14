@@ -24,17 +24,22 @@ const App = () => {
     dispatch({ type: 'TOGGLE_ITEM', payload: id })
   }
 
+  const clearItems = () => {
+    dispatch({ type: 'CLEAR_ITEMS' })
+  }
+
   return (
     <div className="App">
       <h1>Hello World</h1>
       <Form 
         addItem={addItem}
         state={state}
-      />
+        />
 
       <ToDoList 
         state={state}
         toggleItem={toggleItem}
+        clearItems={clearItems}
       />
     </div>
   );

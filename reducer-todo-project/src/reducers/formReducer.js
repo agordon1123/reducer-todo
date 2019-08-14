@@ -33,6 +33,11 @@ export const formReducer = (state, action) => {
                     }
                 })
             }
+        case 'CLEAR_ITEMS':
+                return {
+                    ...state,
+                    item: state.item.filter(i => !i.completed)
+                }
         default:
             return state;
     }
